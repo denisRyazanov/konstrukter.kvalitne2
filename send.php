@@ -1,6 +1,6 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "konstrukter@konstrukter.kvalitne.cz";
+    $to = "#";
     $subject = "Nová zpráva z webu - kontaktní formulář";
 
     $jmeno = htmlspecialchars($_POST["jmeno"]);
