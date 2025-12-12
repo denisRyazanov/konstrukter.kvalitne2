@@ -87,6 +87,13 @@
   </header>
 
   <main class="container" style="margin-top:-40px">
+    <section class="slider">
+      <div class="slides">
+        <img src="img/slider1.jpg" class="slide">
+        <img src="img/slider2.jpg" class="slide">
+        <img src="img/slider3.jpg" class="slide">
+      </div>
+    </section>
     <section id="about" style="margin-bottom:20px">
       <div class="services grid" style="grid-template-columns:1fr">
         <div style="display:flex;gap:18px;align-items:center">
@@ -205,5 +212,11 @@
       <p style="font-size:13px;color:var(--muted)">Tato stránka je jednoduchá šablona. Potřebujete-li úpravy (barvy, texty, další jazyk), upravím ji rád.</p>
     </div>
   </footer>
+  <script>
+    function openLightbox(src){document.getElementById("lightbox-img").src=src;document.getElementById("lightbox").style.display="flex";}
+    let slideIndex=0;const slides=document.querySelectorAll(".slide");
+    function showSlides(){slides.forEach(s=>s.style.opacity="0");slideIndex=(slideIndex+1)%slides.length;slides[slideIndex].style.opacity="1";setTimeout(showSlides,4000);}showSlides();
+    grecaptcha.ready(()=>{grecaptcha.execute('RECAPTCHA_SITE_KEY',{action:'submit'}).then(token=>{document.getElementById('recaptchaResponse').value=token;});});
+  </script>
 </body>
 </html>
