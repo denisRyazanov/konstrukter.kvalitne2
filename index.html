@@ -90,7 +90,6 @@
       </div>
     </div>
   </header>
-
   <main class="container" style="margin-top:-40px">
     <section class="slider">
       <div class="slides">
@@ -110,7 +109,6 @@
         </div>
       </div>
     </section>
-
     <section id="services" style="margin:24px 0">
       <h3>Služby</h3>
       <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:12px">
@@ -132,7 +130,6 @@
         </div>
       </div>
     </section>
-
     <!--<section id="gallery" style="margin:24px 0">
       <h3>Galerie (ukázky prací)</h3>
       <div class="gallery" style="margin-top:12px">
@@ -144,15 +141,18 @@
         <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=60" alt="kovovy prvek 6">
       </div>
     </section>-->
-    <section class="gallery-section"><h2>Galerie prací</h2><div class="gallery">
-      <img src="img/work1.jpg" onclick="openLightbox(this.src)">
-      <img src="img/work2.jpg" onclick="openLightbox(this.src)">
-      <img src="img/work3.jpg" onclick="openLightbox(this.src)">
-      <img src="img/work4.jpg" onclick="openLightbox(this.src)">
-      <img src="img/work5.jpg" onclick="openLightbox(this.src)">
-      <img src="img/work6.jpg" onclick="openLightbox(this.src)">
-    </div></section>
-
+    <section class="gallery-section">
+      <h2>Galerie prací</h2>
+      <div class="gallery">
+        <img src="img/work1.jpg" onclick="openLightbox(this.src)">
+        <img src="img/work2.jpg" onclick="openLightbox(this.src)">
+        <img src="img/work3.jpg" onclick="openLightbox(this.src)">
+        <img src="img/work4.jpg" onclick="openLightbox(this.src)">
+        <img src="img/work5.jpg" onclick="openLightbox(this.src)">
+        <img src="img/work6.jpg" onclick="openLightbox(this.src)">
+      </div>
+    </section>
+    <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img"></div>
     <section id="contact" style="margin:24px 0">
       <h3>Kontakt — poptávka</h3>
       <form onsubmit="event.preventDefault(); alert('Děkujeme! Zpráva byla odeslána (demo formulář).');" novalidate>
@@ -185,7 +185,6 @@
       <p><strong>Adresa:</strong> Pod Dálnicí, 267 01 Králův Dvůr u Berouna</p>
       <p><strong>Telefon:</strong> +420 xxx xxx xxx</p>
       <p><strong>Email:</strong> info@kovar.cz</p>
-
     <!-- Sociální sítě -->
       <div class="social-icons">
         <a href="https://facebook.com" target="_blank">
@@ -202,7 +201,6 @@
             </svg>
         </a>
       </div>
-
     <!-- Mapa -->
       <div class="map-container">
         <iframe 
@@ -215,14 +213,10 @@
         </iframe>
       </div>
   </section>
-
-    
   </main>
-
   <footer>
     <div class="container">
       <p>&copy; 2025 Umělecký kovář — Všechna práva vyhrazena.</p>
-      <p style="font-size:13px;color:var(--muted)">Tato stránka je jednoduchá šablona. Potřebujete-li úpravy (barvy, texty, další jazyk), upravím ji rád.</p>
     </div>
   </footer>
   <script>
