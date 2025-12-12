@@ -224,6 +224,18 @@
     let slideIndex=0;const slides=document.querySelectorAll(".slide");
     function showSlides(){slides.forEach(s=>s.style.opacity="0");slideIndex=(slideIndex+1)%slides.length;slides[slideIndex].style.opacity="1";setTimeout(showSlides,4000);}showSlides();
     grecaptcha.ready(()=>{grecaptcha.execute('RECAPTCHA_SITE_KEY',{action:'submit'}).then(token=>{document.getElementById('recaptchaResponse').value=token;});});
+    const form = document.getElementById('contactForm');
+      const message = document.getElementById('formMessage');
+
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        const response = await fetch('send.php', { method: 'POST', body: formData });
+        const result = await response.text();
+        message.textContent = result;
+        form.reset();
+      });
+     
   </script>
 </body>
 </html>
