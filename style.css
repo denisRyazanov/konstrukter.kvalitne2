@@ -166,9 +166,22 @@ button{
 
 /* MAPA */
 .map-container{
+  width:100%;
+  height:300px;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.map-wrapper iframe{
+  width:100%;
+  height:100%;
+  border:0;
+}
+
   margin-top:30px;
   border-radius:8px;
   overflow:hidden;
+  
 }
 
 /* COOKIE BANNER */
@@ -247,6 +260,21 @@ footer{
 
 .grid-single{
   grid-template-columns:1fr;
+}
+
+.grid-single_title{
+  margin:0 0 6px;
+} 
+
+.grid-single_desc{
+  margin:0;
+  color:var(--muted);
+}
+
+.grid-single_wrap{
+  display:flex;
+  gap:18px;
+  align-items:center;
 }
 
 .grid-services{
