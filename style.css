@@ -27,6 +27,7 @@ header{
   margin:0 auto;
   padding:20px;
 }
+
 .hero-content a {
   background:#fff;
   color:#111;
@@ -234,8 +235,12 @@ footer{
     gap:30px;
     align-items:center;
   }
-  .hero-content{flex:1}
-  .hero-img{flex:1}
+  .hero-content{
+    flex:1
+  }
+  .hero-img{
+    flex:1
+  }
   .hero-img img{
     width:100%;
     border-radius:12px;
@@ -244,6 +249,8 @@ footer{
     padding:5px;
   }
 }
+
+/* LAST */
 .hero-margin{
   margin-top:24px;
 }
@@ -298,7 +305,6 @@ footer{
   flex:1;
   min-width:220px;
 }
-
 
 .info-list{
   margin:0;
