@@ -253,6 +253,11 @@ footer{
   margin:24px 0;
 }
 
+.section-spacing_desc{
+  margin-top:10px;
+  color:var(--muted);
+}
+
 .grid-single{
   grid-template-columns:1fr;
 }
@@ -285,6 +290,12 @@ footer{
   flex-wrap:wrap;
   align-items:flex-start;
 }
+
+.info-section div{
+  flex:1;
+  min-width:220px;
+}
+
 
 .info-list{
   margin:0;
