@@ -65,6 +65,31 @@
             overflow: hidden;
         }
 
+        a.policy {
+        color:white;
+        }
+        
+        .cookie-banner {
+          position: fixed;
+          bottom: 20px;
+          left: 20px;
+          right: 20px;
+          background: #fff;
+          border: 1px solid #ccc;
+          padding: 15px;
+          border-radius: 10px;
+          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+          display: none;
+          z-index: 1000;
+        }
+        .cookie-banner button {
+          margin: 5px;
+          padding: 8px 12px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
         .slider{width:100%;height:350px;overflow:hidden;position:relative;border-radius:10px;}
         .slides img{width:100%;height:350px;object-fit:cover;position:absolute;opacity:0;transition:opacity 1.5s;}
     
@@ -223,15 +248,22 @@
   <footer>
     <div class="container">
       <p>&copy; 2025 Umělecký kovář — Všechna práva vyhrazena.</p>
+      <a class="policy" href="/privacy-policy.html">Zásady ochrany osobních údajů</a>
     </div>
   </footer>
+  <div id="cookie-banner" class="cookie-banner">
+      Tento web používá cookies pro zlepšení funkčnosti. 
+      <a href="/privacy-policy.html" target="_blank">Více informací</a>.
+      <br>
+      <button id="acceptCookies">Přijmout</button>
+      <button id="declineCookies">Odmítnout</button>
+  </div>
   <script>
     function openLightbox(src){document.getElementById("lightbox-img").src=src;document.getElementById("lightbox").style.display="flex";}
     let slideIndex=0;const slides=document.querySelectorAll(".slide");
     function showSlides(){slides.forEach(s=>s.style.opacity="0");slideIndex=(slideIndex+1)%slides.length;slides[slideIndex].style.opacity="1";setTimeout(showSlides,4000);}showSlides();
-    grecaptcha.ready(()=>{grecaptcha.execute('RECAPTCHA_SITE_KEY',{action:'submit'}).then(token=>{document.getElementById('recaptchaResponse').value=token;});});
     const form = document.getElementById('contactForm');
-      const message = document.getElementById('formMessage');
+    const message = document.getElementById('formMessage');
 
       form.addEventListener('submit', async (e) => {
         e.preventDefault();
@@ -241,7 +273,28 @@
         message.textContent = result;
         form.reset();
       });
-     
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("acceptCookies");
+      const declineBtn = document.getElementById("declineCookies");
+    
+      if (!localStorage.getItem("cookiesAccepted")) {
+        banner.style.display = "block";
+      }
+    
+      acceptBtn.onclick = function() {
+        localStorage.setItem("cookiesAccepted", "true");
+        banner.style.display = "none";
+        // можно запустить аналитические скрипты
+        loadAnalytics();
+      };
+    
+      declineBtn.onclick = function() {
+        localStorage.setItem("cookiesAccepted", "false");
+        banner.style.display = "none";
+      };
+    });
   </script>
 </body>
 </html>
