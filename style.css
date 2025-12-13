@@ -25,7 +25,7 @@ header{
 .container{
   max-width:1100px;
   margin:0 auto;
-  padding:20px;
+  padding:5px;
 }
 
 .hero-content a {
@@ -246,7 +246,7 @@ footer{
     border-radius:12px;
   }
   .container{
-    padding:5px;
+    padding:20px;
   }
 }
 
