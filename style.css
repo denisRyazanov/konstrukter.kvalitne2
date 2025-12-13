@@ -49,7 +49,7 @@ p.lead{
 /* NAV */
 nav{
   display:flex;
-  gap:12px;
+  gap:8px;
   align-items:center;
   flex-wrap:wrap;
 }
@@ -249,7 +249,7 @@ footer{
     padding:20px;
   }
   nav{
-    gap:8px;
+    gap:12px;
   }
 }
 
