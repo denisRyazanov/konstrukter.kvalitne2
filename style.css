@@ -27,7 +27,13 @@ header{
   margin:0 auto;
   padding:20px;
 }
-
+.hero-content a {
+  background:#fff;
+  color:#111;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+}
 h1{
   font-size:clamp(28px,4vw,44px);
   margin:0 0 10px;
