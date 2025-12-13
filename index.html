@@ -11,98 +11,6 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <link rel="stylesheet" href="style.css">
-  <!--<style>
-    :root{--accent:#2b2b2b;--muted:#6b6b6b;--bg:#f8f6f2}
-    *{box-sizing:border-box}
-    body{font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;margin:0;color:#222;background:var(--bg)}
-    header{background:linear-gradient(180deg,#111 0%,rgba(17,17,17,0.85) 60%),url('img/slider3.jpg') center/cover no-repeat;color:#fff;padding:80px 20px}
-    .container{max-width:1100px;margin:0 auto;padding:20px}
-    h1{font-size:clamp(28px,4vw,44px);margin:0 0 10px}
-    p.lead{font-size:18px;margin:0 0 20px;opacity:.95}
-    nav{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-    nav a{color:#fff;text-decoration:none;padding:8px 12px;border-radius:8px;background:rgba(255,255,255,0.06)}
-    .grid{display:grid;gap:20px}
-
-    .services{background:#fff;padding:40px;border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
-    .services .card{padding:18px;border-radius:10px}
-    /*
-    .gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
-    .gallery img{width:100%;height:140px;object-fit:cover;border-radius:8px;display:block}*/
-    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:15px;padding:40px;}
-    .gallery img{width:100%;border-radius:6px;cursor:pointer;transition:.3s;}
-    .gallery img:hover{transform:scale(1.05);}
-    #lightbox{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,.85);justify-content:center;align-items:center;}
-    #lightbox img{max-width:90%;max-height:90%;border-radius:10px;}
-    form{display:grid;gap:10px}
-    input[type=text],input[type=email],textarea{padding:10px;border-radius:8px;border:1px solid #ddd;width:100%}
-    button{background:var(--accent);color:#fff;padding:12px;border-radius:10px;border:0;cursor:pointer}
-
-    /* Sociální sítě */
-        .social-icons {
-            text-align: center;
-            margin-top: 25px;
-        }
-
-        .social-icons a {
-            display: inline-block;
-            margin: 0 12px;
-        }
-
-        .social-icons svg {
-            width: 40px;
-            height: 40px;
-            fill: #222;
-            transition: 0.3s;
-        }
-
-        .social-icons svg:hover {
-            fill: #0056b3;
-        }
-
-        /* Mapa */
-        .map-container {
-            margin-top: 30px;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-       /* a.policy {
-        color:white;
-        }*/
-        
-        .cookie-banner {
-          position: fixed;
-          bottom: 20px;
-          left: 20px;
-          right: 20px;
-          background: #fff;
-          border: 1px solid #ccc;
-          padding: 15px;
-          border-radius: 10px;
-          box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-          display: none;
-          z-index: 1000;
-        }
-        .cookie-banner button {
-          margin: 5px;
-          padding: 8px 12px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-        }
-
-        .slider{width:100%;height:350px;overflow:hidden;position:relative;border-radius:10px;}
-        .slides img{width:100%;height:350px;object-fit:cover;position:absolute;opacity:0;transition:opacity 1.5s;}
-    
-    footer{padding:30px 0;text-align:center;color:var(--muted)}
-
-    @media(min-width:800px){
-      .hero-row{display:flex;gap:30px;align-items:center}
-      .hero-content{flex:1}
-      .hero-img{flex:1}
-      .hero-img img{width:100%;border-radius:12px}
-    }
-  </style>-->
 </head>
 <body>
   <header>
@@ -113,7 +21,7 @@
         <a href="#gallery">Galerie</a>
         <a href="#contact">Kontakt</a>
       </nav>
-      <div class="hero-row" style="margin-top:24px">
+      <div class="hero-row hero-margin">
         <div class="hero-content">
           <h1>Umělecký kovář — ručně kované kovové dílo</h1>
           <p class="lead">Vyrábím kované zábradlí, brány, svícny, interiérové dekorace a zakázkové kovové prvky. Kombinuji tradiční výkovek s moderním designem.</p>
@@ -122,7 +30,7 @@
       </div>
     </div>
   </header>
-  <main class="container" style="margin-top:-40px">
+  <main class="container main-offset">
     <section class="slider">
       <div class="slides">
         <img src="img/slider1.jpg" class="slide">
@@ -130,10 +38,9 @@
         <img src="img/slider3.jpg" class="slide">
       </div>
     </section>
-    <section id="about" style="margin-bottom:20px">
-      <div class="services grid" style="grid-template-columns:1fr">
+    <section id="about" class="section-spacing">
+      <div class="services grid grid-single">
         <div style="display:flex;gap:18px;align-items:center">
-          <!--<div style="width:84px;height:84px;border-radius:12px;background:#eee;display:flex;align-items:center;justify-content:center;font-weight:700;color:#444">KOV</div>-->
           <div>
             <h2 style="margin:0 0 6px">O mně</h2>
             <p style="margin:0;color:var(--muted)">Jmenuji se Viktor Baldych. Pracuji s kovem více než 12 let — od drobných dekorací po velké brány a zábradlí. Nabízím návrh, výrobu a montáž.</p>
@@ -141,9 +48,9 @@
         </div>
       </div>
     </section>
-    <section id="services" style="margin:24px 0">
+    <section id="services" class="section-spacing">
       <h3>Služby</h3>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:12px">
+      <div class="grid grid-services">
         <div class="card services">
           <h4>Zakázková výroba</h4>
           <p>Brány, ploty, zábradlí a dveřní prvky podle návrhu.</p>
@@ -162,17 +69,6 @@
         </div>
       </div>
     </section>
-    <!--<section id="gallery" style="margin:24px 0">
-      <h3>Galerie (ukázky prací)</h3>
-      <div class="gallery" style="margin-top:12px">
-        <img src="https://images.unsplash.com/photo-1534081333815-ae5019106622?auto=format&fit=crop&w=800&q=60" alt="kovovy prvek 1">
-        <img src="https://images.unsplash.com/photo-1526318472351-c75fcf070ee3?auto=format&fit=crop&w=800&q=60" alt="kovovy prvek 2">
-        <img src="https://images.unsplash.com/photo-1545235617-9465c53f378d?auto=format&fit=crop&w=800&q=60" alt="kovovy prvek 3">
-        <img src="https://images.unsplash.com/photo-1555685812-4b943f1f0f50?auto=format&fit=crop&w=800&q=60" alt="kovovy prvek 4">
-        <img src="https://images.unsplash.com/photo-1485965120184-e220f721d03e?auto=format&fit=crop&w=800&q=60" alt="kovovy prvek 5">
-        <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?auto=format&fit=crop&w=800&q=60" alt="kovovy prvek 6">
-      </div>
-    </section>-->
     <section class="gallery-section">
       <h2>Galerie prací</h2>
       <div class="gallery">
@@ -191,7 +87,7 @@
       </div>
     </section>
     <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img"></div>
-    <section id="contact" style="margin:24px 0">
+    <section id="contact" class="section-spacing">
       <h3>Kontakt — poptávka</h3>
       <form onsubmit="event.preventDefault(); alert('Děkujeme! Zpráva byla odeslána (demo formulář).');" novalidate>
         <label>Jméno<br><input type="text" name="name" placeholder="Vaše jméno" required></label>
@@ -204,7 +100,7 @@
       <p style="margin-top:10px;color:var(--muted)">Nebo napište rovnou na <a href="mailto:#">umeleckykovar@kvalitne.cz</a>.</p>
     </section>
 
-    <section style="margin:32px 0;display:flex;gap:20px;flex-wrap:wrap;align-items:flex-start">
+    <section class="info-section">
       <div style="flex:1;min-width:220px">
         <h4>Praktické informace</h4>
         <ul style="margin:0;padding-left:18px;color:var(--muted)">
@@ -213,10 +109,10 @@
           <li>Povrchové úpravy: surový kov, lak, patina, práškové lakování</li>
         </ul>
       </div>
-      <div style="min-width:220px">
+      <!--<div style="min-width:220px">
         <h4>Kontakt</h4>
         <p style="margin:0;color:var(--muted)">Adresa: Pod Dálnicí, 267 01 Králův Dvůr u Berouna</p>
-      </div>
+      </div>-->
     </section>
     <section id="kontakt">
       <h2>Kontakt</h2>
