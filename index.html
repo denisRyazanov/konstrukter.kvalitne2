@@ -89,15 +89,16 @@
     <div id="lightbox" onclick="this.style.display='none'"><img id="lightbox-img"></div>
     <section id="contact" class="section-spacing">
       <h3>Kontakt — poptávka</h3>
-      <form onsubmit="event.preventDefault(); alert('Děkujeme! Zpráva byla odeslána.');" novalidate>
-        <label>Jméno<br><input type="text" name="name" placeholder="Vaše jméno" required></label>
-        <label>E-mail<br><input type="email" name="email" placeholder="vas@priklad.cz" required></label>
-        <label>Telefon (volitelně)<br><input type="text" name="phone" placeholder="+420 123 456 789"></label>
-        <label>Zpráva<br><textarea name="message" rows="5" placeholder="Napište, co potřebujete..." required></textarea></label>
-        <label>Přiložit soubor (náčrt, foto)<br><input type="file" name="attachment" accept="image/*,.pdf"></label>
-        <button type="submit">Odeslat poptávku</button>
-      </form>
-      <p class="section-spacing_desc">Nebo napište rovnou na <a href="mailto:viktor.baldych89@gmail.com">viktor.baldych89@gmail.com</a>.</p>
+      <form id="contactForm" action="send.php" method="POST" enctype="multipart/form-data">
+      <input type="text" name="jmeno" placeholder="Jméno" required>
+      <input type="email" name="email" placeholder="E-mail" required>
+      <input type="tel" name="telefon" placeholder="Telefon" required>
+      <textarea name="zprava" placeholder="Zpráva" rows="5" required></textarea>
+      <input type="file" name="soubor" accept=".pdf,.jpg,.png,.zip,.doc,.docx">
+      <button type="submit">Odeslat</button>
+    </form>
+    <p id="formMessage" style="margin-top:1rem; text-align:center; font-weight:500;"></p>
+    <p class="section-spacing_desc">Nebo napište rovnou na <a href="mailto:viktor.baldych89@gmail.com">viktor.baldych89@gmail.com</a>.</p>
     </section>
 
     <section class="info-section">
