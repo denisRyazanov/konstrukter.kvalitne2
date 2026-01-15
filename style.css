@@ -127,6 +127,7 @@ form{
 
 input[type=text],
 input[type=email],
+input[type=tel],
 textarea{
   padding:10px;
   border-radius:8px;
